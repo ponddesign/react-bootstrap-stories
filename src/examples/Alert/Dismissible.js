@@ -1,5 +1,8 @@
-function AlertDismissibleExample() {
-  const [show, setShow] = useState(true);
+import React from "react";
+import { Alert, Button } from "react-bootstrap";
+
+export default () => {
+  const [show, setShow] = React.useState(true);
 
   if (show) {
     return (
@@ -14,6 +17,4 @@ function AlertDismissibleExample() {
     );
   }
   return <Button onClick={() => setShow(true)}>Show Alert</Button>;
-}
-
-render(<AlertDismissibleExample />);
+};
