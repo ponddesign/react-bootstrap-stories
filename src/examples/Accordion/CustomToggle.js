@@ -1,12 +1,15 @@
+import React from "react";
+import { Accordion, Card, useAccordionToggle } from "react-bootstrap";
+
 function CustomToggle({ children, eventKey }) {
   const decoratedOnClick = useAccordionToggle(eventKey, () =>
-    console.log('totally custom!'),
+    console.log("totally custom!")
   );
 
   return (
     <button
       type="button"
-      style={{ backgroundColor: 'pink' }}
+      style={{ backgroundColor: "pink" }}
       onClick={decoratedOnClick}
     >
       {children}
@@ -14,7 +17,7 @@ function CustomToggle({ children, eventKey }) {
   );
 }
 
-function Example() {
+export default function Example() {
   return (
     <Accordion defaultActiveKey="0">
       <Card>
@@ -36,5 +39,3 @@ function Example() {
     </Accordion>
   );
 }
-
-render(<Example />);
