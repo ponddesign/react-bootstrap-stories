@@ -1,7 +1,7 @@
 import React from "react";
 import { Tab, Tabs, Sonnet } from "react-bootstrap";
 
-export default function ControlledTabs() {
+export default () => {
   const [key, setKey] = React.useState("home");
 
   return (
@@ -21,4 +21,4 @@ export default function ControlledTabs() {
       </Tab>
     </Tabs>
   );
-}
+};
