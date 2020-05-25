@@ -1,6 +1,10 @@
-<>
-  <style type="text/css">
-    {`
+import React from "react";
+import { Button } from "react-bootstrap";
+
+export default () => (
+  <>
+    <style type="text/css">
+      {`
     .btn-flat {
       background-color: purple;
       color: white;
@@ -11,9 +15,10 @@
       font-size: 1.5rem;
     }
     `}
-  </style>
+    </style>
 
-  <Button variant="flat" size="xxl">
-    flat button
-  </Button>
-</>;
+    <Button variant="flat" size="xxl">
+      flat button
+    </Button>
+  </>
+);

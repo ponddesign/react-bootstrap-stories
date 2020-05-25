@@ -1,5 +1,8 @@
-function Example() {
-  const [show, setShow] = useState(false);
+import React from "react";
+import { Toast, Row, Col, Button } from "react-bootstrap";
+
+export default function Example() {
+  const [show, setShow] = React.useState(false);
 
   return (
     <Row>
@@ -23,5 +26,3 @@ function Example() {
     </Row>
   );
 }
-
-render(<Example />);

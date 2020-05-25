@@ -1,5 +1,8 @@
-function ControlledTabs() {
-  const [key, setKey] = useState('home');
+import React from "react";
+import { Tab, Tabs, Sonnet } from "react-bootstrap";
+
+export default function ControlledTabs() {
+  const [key, setKey] = React.useState("home");
 
   return (
     <Tabs
@@ -19,5 +22,3 @@ function ControlledTabs() {
     </Tabs>
   );
 }
-
-render(<ControlledTabs />);

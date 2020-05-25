@@ -1,11 +1,14 @@
+import React from "react";
+import { Button } from "react-bootstrap";
+
 function simulateNetworkRequest() {
   return new Promise((resolve) => setTimeout(resolve, 2000));
 }
 
-function LoadingButton() {
-  const [isLoading, setLoading] = useState(false);
+export default function LoadingButton() {
+  const [isLoading, setLoading] = React.useState(false);
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (isLoading) {
       simulateNetworkRequest().then(() => {
         setLoading(false);
@@ -21,9 +24,7 @@ function LoadingButton() {
       disabled={isLoading}
       onClick={!isLoading ? handleClick : null}
     >
-      {isLoading ? 'Loading…' : 'Click to load'}
+      {isLoading ? "Loading…" : "Click to load"}
     </Button>
   );
 }
-
-render(<LoadingButton />);

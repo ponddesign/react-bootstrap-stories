@@ -1,8 +1,11 @@
+import React from "react";
+import { Dropdown, FormControl } from "react-bootstrap";
+
 // The forwardRef is important!!
 // Dropdown needs access to the DOM node in order to position the Menu
 const CustomToggle = React.forwardRef(({ children, onClick }, ref) => (
   <a
-    href=""
+    href="#custom-toggle"
     ref={ref}
     onClick={(e) => {
       e.preventDefault();
@@ -17,8 +20,8 @@ const CustomToggle = React.forwardRef(({ children, onClick }, ref) => (
 // forwardRef again here!
 // Dropdown needs access to the DOM of the Menu to measure it
 const CustomMenu = React.forwardRef(
-  ({ children, style, className, 'aria-labelledby': labeledBy }, ref) => {
-    const [value, setValue] = useState('');
+  ({ children, style, className, "aria-labelledby": labeledBy }, ref) => {
+    const [value, setValue] = React.useState("");
 
     return (
       <div
@@ -37,15 +40,15 @@ const CustomMenu = React.forwardRef(
         <ul className="list-unstyled">
           {React.Children.toArray(children).filter(
             (child) =>
-              !value || child.props.children.toLowerCase().startsWith(value),
+              !value || child.props.children.toLowerCase().startsWith(value)
           )}
         </ul>
       </div>
     );
-  },
+  }
 );
 
-render(
+export default () => (
   <Dropdown>
     <Dropdown.Toggle as={CustomToggle} id="dropdown-custom-components">
       Custom toggle
@@ -59,5 +62,5 @@ render(
       </Dropdown.Item>
       <Dropdown.Item eventKey="1">Red-Orange</Dropdown.Item>
     </Dropdown.Menu>
-  </Dropdown>,
+  </Dropdown>
 );

@@ -1,13 +1,17 @@
+import React from "react";
+import ReactDOM from "react-dom";
+import { Button, Overlay } from "react-bootstrap";
+
 function CustomPopover({ className, style }) {
   return (
     <div
       className={className}
       style={{
         ...style,
-        position: 'absolute',
-        backgroundColor: '#EEE',
-        boxShadow: '0 5px 10px rgba(0, 0, 0, 0.2)',
-        border: '1px solid #CCC',
+        position: "absolute",
+        backgroundColor: "#EEE",
+        boxShadow: "0 5px 10px rgba(0, 0, 0, 0.2)",
+        border: "1px solid #CCC",
         borderRadius: 3,
         marginLeft: -5,
         marginTop: 5,
@@ -19,7 +23,7 @@ function CustomPopover({ className, style }) {
   );
 }
 
-class Example extends React.Component {
+export default class Example extends React.Component {
   constructor(props, context) {
     super(props, context);
 
@@ -36,7 +40,7 @@ class Example extends React.Component {
 
   render() {
     return (
-      <div style={{ height: 100, position: 'relative' }}>
+      <div style={{ height: 100, position: "relative" }}>
         <Button
           ref={(button) => {
             this.target = button;
@@ -59,5 +63,3 @@ class Example extends React.Component {
     );
   }
 }
-
-render(<Example />);

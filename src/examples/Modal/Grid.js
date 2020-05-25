@@ -1,3 +1,6 @@
+import React from "react";
+import { Modal, Button, Container, Row, Col } from "react-bootstrap";
+
 function MydModalWithGrid(props) {
   return (
     <Modal {...props} aria-labelledby="contained-modal-title-vcenter">
@@ -37,8 +40,8 @@ function MydModalWithGrid(props) {
   );
 }
 
-function App() {
-  const [modalShow, setModalShow] = useState(false);
+export default function App() {
+  const [modalShow, setModalShow] = React.useState(false);
 
   return (
     <>
@@ -50,5 +53,3 @@ function App() {
     </>
   );
 }
-
-render(<App />);

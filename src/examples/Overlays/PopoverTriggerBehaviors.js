@@ -1,3 +1,6 @@
+import React from "react";
+import { OverlayTrigger, Popover, Button } from "react-bootstrap";
+
 const popover = (triggerBehavior) => (
   <Popover id={`popover-trigger-${triggerBehavior}`}>
     <Popover.Title as="h3">Popover bottom</Popover.Title>
@@ -15,21 +18,21 @@ const popoverFocus = <popover triggerBehavior="focus" />;
 
 const popoverClickRootClose = <popover triggerBehavior="click-root-close" />;
 
-render(
+export default () => (
   <>
     <OverlayTrigger trigger="click" placement="bottom" overlay={popoverClick}>
       <Button>Click</Button>
-    </OverlayTrigger>{' '}
+    </OverlayTrigger>{" "}
     <OverlayTrigger
-      trigger={['hover', 'focus']}
+      trigger={["hover", "focus"]}
       placement="bottom"
       overlay={popoverHoverFocus}
     >
       <Button>Hover + Focus</Button>
-    </OverlayTrigger>{' '}
+    </OverlayTrigger>{" "}
     <OverlayTrigger trigger="focus" placement="bottom" overlay={popoverFocus}>
       <Button>Focus</Button>
-    </OverlayTrigger>{' '}
+    </OverlayTrigger>{" "}
     <OverlayTrigger
       trigger="click"
       rootClose
@@ -38,5 +41,5 @@ render(
     >
       <Button>Click w/rootClose</Button>
     </OverlayTrigger>
-  </>,
+  </>
 );

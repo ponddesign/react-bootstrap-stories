@@ -1,5 +1,8 @@
-function FormExample() {
-  const [validated, setValidated] = useState(false);
+import React from "react";
+import { Col, InputGroup, Form, Button } from "react-bootstrap";
+
+export default function FormExample() {
+  const [validated, setValidated] = React.useState(false);
 
   const handleSubmit = (event) => {
     const form = event.currentTarget;
@@ -86,5 +89,3 @@ function FormExample() {
     </Form>
   );
 }
-
-render(<FormExample />);

@@ -1,5 +1,8 @@
-function ToggleButtonGroupControlled() {
-  const [value, setValue] = useState([1, 3]);
+import React from "react";
+import { ToggleButton, ToggleButtonGroup } from "react-bootstrap";
+
+export default function ToggleButtonGroupControlled() {
+  const [value, setValue] = React.useState([1, 3]);
 
   /*
    * The second argument that will be passed to
@@ -17,5 +20,3 @@ function ToggleButtonGroupControlled() {
     </ToggleButtonGroup>
   );
 }
-
-render(<ToggleButtonGroupControlled />);

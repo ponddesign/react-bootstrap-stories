@@ -1,3 +1,6 @@
+import React from "react";
+import { Form } from "react-bootstrap";
+
 const { Formik } = formik;
 
 const schema = yup.object({
@@ -7,7 +10,6 @@ const schema = yup.object({
   city: yup.string().required(),
   state: yup.string().required(),
   zip: yup.string().required(),
-  file: yup.string().required(),
   terms: yup.bool().required(),
 });
 
@@ -17,8 +19,8 @@ function FormExample() {
       validationSchema={schema}
       onSubmit={console.log}
       initialValues={{
-        firstName: 'Mark',
-        lastName: 'Otto',
+        firstName: "Mark",
+        lastName: "Otto",
       }}
     >
       {({
@@ -41,7 +43,7 @@ function FormExample() {
                 onChange={handleChange}
                 isValid={touched.firstName && !errors.firstName}
               />
-              <Form.Control.Feedback tooltip>Looks good!</Form.Control.Feedback>
+              <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
             </Form.Group>
             <Form.Group as={Col} md="4" controlId="validationFormik02">
               <Form.Label>Last name</Form.Label>
@@ -53,7 +55,7 @@ function FormExample() {
                 isValid={touched.lastName && !errors.lastName}
               />
 
-              <Form.Control.Feedback tooltip>Looks good!</Form.Control.Feedback>
+              <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
             </Form.Group>
             <Form.Group as={Col} md="4" controlId="validationFormikUsername">
               <Form.Label>Username</Form.Label>
@@ -70,7 +72,7 @@ function FormExample() {
                   onChange={handleChange}
                   isInvalid={!!errors.username}
                 />
-                <Form.Control.Feedback type="invalid" tooltip>
+                <Form.Control.Feedback type="invalid">
                   {errors.username}
                 </Form.Control.Feedback>
               </InputGroup>
@@ -88,7 +90,7 @@ function FormExample() {
                 isInvalid={!!errors.city}
               />
 
-              <Form.Control.Feedback type="invalid" tooltip>
+              <Form.Control.Feedback type="invalid">
                 {errors.city}
               </Form.Control.Feedback>
             </Form.Group>
@@ -102,7 +104,7 @@ function FormExample() {
                 onChange={handleChange}
                 isInvalid={!!errors.state}
               />
-              <Form.Control.Feedback type="invalid" tooltip>
+              <Form.Control.Feedback type="invalid">
                 {errors.state}
               </Form.Control.Feedback>
             </Form.Group>
@@ -117,24 +119,11 @@ function FormExample() {
                 isInvalid={!!errors.zip}
               />
 
-              <Form.Control.Feedback type="invalid" tooltip>
+              <Form.Control.Feedback type="invalid">
                 {errors.zip}
               </Form.Control.Feedback>
             </Form.Group>
           </Form.Row>
-          <Form.Group>
-            <Form.File
-              className="position-relative"
-              required
-              name="file"
-              label="File"
-              onChange={handleChange}
-              isInvalid={!!errors.file}
-              feedback={errors.file}
-              id="validationFormik07"
-              feedbackTooltip
-            />
-          </Form.Group>
           <Form.Group>
             <Form.Check
               required
@@ -143,8 +132,7 @@ function FormExample() {
               onChange={handleChange}
               isInvalid={!!errors.terms}
               feedback={errors.terms}
-              id="validationFormik06"
-              feedbackTooltip
+              id="validationFormik0"
             />
           </Form.Group>
           <Button type="submit">Submit form</Button>

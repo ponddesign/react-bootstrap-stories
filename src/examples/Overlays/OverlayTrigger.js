@@ -1,3 +1,6 @@
+import React from "react";
+import { Tooltip, OverlayTrigger, Button } from "react-bootstrap";
+
 function renderTooltip(props) {
   return (
     <Tooltip id="button-tooltip" {...props}>
@@ -6,7 +9,7 @@ function renderTooltip(props) {
   );
 }
 
-const Example = () => (
+export default () => (
   <OverlayTrigger
     placement="right"
     delay={{ show: 250, hide: 400 }}
@@ -15,5 +18,3 @@ const Example = () => (
     <Button variant="success">Hover me to see</Button>
   </OverlayTrigger>
 );
-
-render(<Example />);

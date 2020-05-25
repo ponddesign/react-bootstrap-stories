@@ -1,3 +1,6 @@
+import React from "react";
+import { OverlayTrigger, Popover, Button } from "react-bootstrap";
+
 const popover = (position) => (
   <Popover id={`popover-positioned-scrolling-${position}`}>
     <Popover.Title as="h3">{`Popover ${position}`}</Popover.Title>
@@ -15,10 +18,10 @@ const popoverBottom = <popover position="bottom" />;
 
 const popoverRight = <popover position="right" />;
 
-class Positioner extends React.Component {
+export default class Positioner extends React.Component {
   render() {
     return (
-      <div style={{ padding: '100px 0' }}>
+      <div style={{ padding: "100px 0" }}>
         <OverlayTrigger
           container={this}
           trigger="click"
@@ -26,7 +29,7 @@ class Positioner extends React.Component {
           overlay={popoverLeft}
         >
           <Button>Holy guacamole!</Button>
-        </OverlayTrigger>{' '}
+        </OverlayTrigger>{" "}
         <OverlayTrigger
           container={this}
           trigger="click"
@@ -34,7 +37,7 @@ class Positioner extends React.Component {
           overlay={popoverTop}
         >
           <Button>Holy guacamole!</Button>
-        </OverlayTrigger>{' '}
+        </OverlayTrigger>{" "}
         <OverlayTrigger
           container={this}
           trigger="click"
@@ -42,7 +45,7 @@ class Positioner extends React.Component {
           overlay={popoverBottom}
         >
           <Button>Holy guacamole!</Button>
-        </OverlayTrigger>{' '}
+        </OverlayTrigger>{" "}
         <OverlayTrigger
           container={this}
           trigger="click"
@@ -55,5 +58,3 @@ class Positioner extends React.Component {
     );
   }
 }
-
-render(<Positioner />);

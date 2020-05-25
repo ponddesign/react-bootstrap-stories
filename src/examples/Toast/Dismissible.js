@@ -1,6 +1,9 @@
-function Example() {
-  const [showA, setShowA] = useState(true);
-  const [showB, setShowB] = useState(true);
+import React from "react";
+import { Button, Col, Row, Toast } from "react-bootstrap";
+
+export default function Example() {
+  const [showA, setShowA] = React.useState(true);
+  const [showB, setShowB] = React.useState(true);
 
   const toggleShowA = () => setShowA(!showA);
   const toggleShowB = () => setShowB(!showB);
@@ -48,5 +51,3 @@ function Example() {
     </Row>
   );
 }
-
-render(<Example />);

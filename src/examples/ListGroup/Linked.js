@@ -1,8 +1,11 @@
+import React from "react";
+import { ListGroup } from "react-bootstrap";
+
 function alertClicked() {
-  alert('You clicked the third ListGroupItem');
+  alert("You clicked the third ListGroupItem");
 }
 
-render(
+export default () => (
   <ListGroup defaultActiveKey="#link1">
     <ListGroup.Item action href="#link1">
       Link 1
@@ -13,5 +16,5 @@ render(
     <ListGroup.Item action onClick={alertClicked}>
       This one is a button
     </ListGroup.Item>
-  </ListGroup>,
+  </ListGroup>
 );

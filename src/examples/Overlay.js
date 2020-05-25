@@ -1,4 +1,8 @@
-class Example extends React.Component {
+import React from "react";
+import ReactDOM from "react-dom";
+import { Button, Overlay, Tooltip } from "react-bootstrap";
+
+export default class Example extends React.Component {
   constructor(props, context) {
     super(props, context);
 
@@ -26,7 +30,7 @@ class Example extends React.Component {
     };
 
     return (
-      <div style={{ height: 100, paddingLeft: 150, position: 'relative' }}>
+      <div style={{ height: 100, paddingLeft: 150, position: "relative" }}>
         <Button
           ref={(button) => {
             this.target = button;
@@ -52,5 +56,3 @@ class Example extends React.Component {
     );
   }
 }
-
-render(<Example />);

@@ -1,5 +1,8 @@
-function Example() {
-  const [show, setShow] = useState(false);
+import React from "react";
+import { Modal, Button } from "react-bootstrap";
+
+export default function Example() {
+  const [show, setShow] = React.useState(false);
 
   return (
     <>
@@ -33,5 +36,3 @@ function Example() {
     </>
   );
 }
-
-render(<Example />);

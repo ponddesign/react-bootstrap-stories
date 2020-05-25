@@ -1,4 +1,7 @@
-function NavDropdownExample() {
+import React from "react";
+import { Nav, NavDropdown } from "react-bootstrap";
+
+export default function NavDropdownExample() {
   const handleSelect = (eventKey) => alert(`selected ${eventKey}`);
 
   return (
@@ -28,5 +31,3 @@ function NavDropdownExample() {
     </Nav>
   );
 }
-
-render(<NavDropdownExample />);

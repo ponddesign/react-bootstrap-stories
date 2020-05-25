@@ -1,7 +1,10 @@
+import React from "react";
+import { OverlayTrigger, Popover, Button } from "react-bootstrap";
+
 const UpdatingPopover = React.forwardRef(
   ({ popper, children, show: _, ...props }, ref) => {
-    useEffect(() => {
-      console.log('updating!');
+    React.useEffect(() => {
+      console.log("updating!");
       popper.scheduleUpdate();
     }, [children, popper]);
 
@@ -10,7 +13,7 @@ const UpdatingPopover = React.forwardRef(
         {children}
       </Popover>
     );
-  },
+  }
 );
 
 const longContent = `
@@ -18,12 +21,12 @@ const longContent = `
   Multiline content
   that is engaging and what-not
 `;
-const shortContent = 'Short and sweet!';
+const shortContent = "Short and sweet!";
 
-function Example() {
-  const [content, setContent] = useState(shortContent);
+export default function Example() {
+  const [content, setContent] = React.useState(shortContent);
 
-  useEffect(() => {
+  React.useEffect(() => {
     const timerId = setInterval(() => {
       setContent(content === shortContent ? longContent : shortContent);
     }, 3000);
@@ -42,5 +45,3 @@ function Example() {
     </OverlayTrigger>
   );
 }
-
-render(<Example />);

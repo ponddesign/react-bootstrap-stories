@@ -1,3 +1,6 @@
+import React from "react";
+import { Popover, OverlayTrigger, Button } from "react-bootstrap";
+
 const popover = (
   <Popover id="popover-basic">
     <Popover.Title as="h3">Popover right</Popover.Title>
@@ -8,10 +11,8 @@ const popover = (
   </Popover>
 );
 
-const Example = () => (
+export default () => (
   <OverlayTrigger trigger="click" placement="right" overlay={popover}>
     <Button variant="success">Click me to see</Button>
   </OverlayTrigger>
 );
-
-render(<Example />);

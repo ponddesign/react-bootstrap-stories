@@ -1,3 +1,6 @@
+import React from "react";
+import { Button, Checkbox, Form, HelpBlock, Radio } from "react-bootstrap";
+
 function FieldGroup({ id, label, help, ...props }) {
   return (
     <Form.Group controlId={id}>
@@ -8,7 +11,7 @@ function FieldGroup({ id, label, help, ...props }) {
   );
 }
 
-const formInstance = (
+export default () => (
   <Form>
     <FieldGroup
       id="Form.ControlsText"
@@ -38,16 +41,16 @@ const formInstance = (
     </Radio>
 
     <Form.Group>
-      <Checkbox inline>1</Checkbox> <Checkbox inline>2</Checkbox>{' '}
+      <Checkbox inline>1</Checkbox> <Checkbox inline>2</Checkbox>{" "}
       <Checkbox inline>3</Checkbox>
     </Form.Group>
     <Form.Group>
       <Radio name="radioGroup" inline>
         1
-      </Radio>{' '}
+      </Radio>{" "}
       <Radio name="radioGroup" inline>
         2
-      </Radio>{' '}
+      </Radio>{" "}
       <Radio name="radioGroup" inline>
         3
       </Radio>
@@ -81,5 +84,3 @@ const formInstance = (
     <Button type="submit">Submit</Button>
   </Form>
 );
-
-render(formInstance);

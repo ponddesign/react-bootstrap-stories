@@ -1,10 +1,13 @@
-function Example() {
-  const [smShow, setSmShow] = useState(false);
-  const [lgShow, setLgShow] = useState(false);
+import React from "react";
+import { Modal, Button } from "react-bootstrap";
+
+export default function Example() {
+  const [smShow, setSmShow] = React.useState(false);
+  const [lgShow, setLgShow] = React.useState(false);
 
   return (
     <>
-      <Button onClick={() => setSmShow(true)}>Small modal</Button>{' '}
+      <Button onClick={() => setSmShow(true)}>Small modal</Button>{" "}
       <Button onClick={() => setLgShow(true)}>Large modal</Button>
       <Modal
         size="sm"
@@ -35,5 +38,3 @@ function Example() {
     </>
   );
 }
-
-render(<Example />);

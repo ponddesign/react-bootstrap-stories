@@ -1,5 +1,8 @@
-function Example() {
-  const [open, setOpen] = useState(false);
+import React from "react";
+import { Button, Collapse } from "react-bootstrap";
+
+export default function Example() {
+  const [open, setOpen] = React.useState(false);
 
   return (
     <>
@@ -20,5 +23,3 @@ function Example() {
     </>
   );
 }
-
-render(<Example />);

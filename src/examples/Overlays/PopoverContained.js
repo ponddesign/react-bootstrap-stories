@@ -1,7 +1,10 @@
-function Example() {
-  const [show, setShow] = useState(false);
-  const [target, setTarget] = useState(null);
-  const ref = useRef(null);
+import React from "react";
+import { Popover, Overlay, Button } from "react-bootstrap";
+
+export default function Example() {
+  const [show, setShow] = React.useState(false);
+  const [target, setTarget] = React.useState(null);
+  const ref = React.useRef(null);
 
   const handleClick = (event) => {
     setShow(!show);
@@ -29,5 +32,3 @@ function Example() {
     </div>
   );
 }
-
-render(<Example />);

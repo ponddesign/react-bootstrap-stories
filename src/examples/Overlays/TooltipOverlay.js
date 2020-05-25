@@ -1,6 +1,9 @@
-function Example() {
-  const [show, setShow] = useState(false);
-  const target = useRef(null);
+import React from "react";
+import { Tooltip, Overlay, Button } from "react-bootstrap";
+
+export default function Example() {
+  const [show, setShow] = React.useState(false);
+  const target = React.useRef(null);
 
   return (
     <>
@@ -17,5 +20,3 @@ function Example() {
     </>
   );
 }
-
-render(<Example />);

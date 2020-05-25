@@ -1,6 +1,9 @@
-function Example() {
-  const [show, setShow] = useState(false);
-  const target = useRef(null);
+import React from "react";
+import { Overlay, Button } from "react-bootstrap";
+
+export default function Example() {
+  const [show, setShow] = React.useState(false);
+  const target = React.useRef(null);
 
   return (
     <>
@@ -19,9 +22,9 @@ function Example() {
           <div
             {...props}
             style={{
-              backgroundColor: 'rgba(255, 100, 100, 0.85)',
-              padding: '2px 10px',
-              color: 'white',
+              backgroundColor: "rgba(255, 100, 100, 0.85)",
+              padding: "2px 10px",
+              color: "white",
               borderRadius: 3,
               ...props.style,
             }}
@@ -33,5 +36,3 @@ function Example() {
     </>
   );
 }
-
-render(<Example />);
