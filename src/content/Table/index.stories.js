@@ -7,7 +7,7 @@ import ResponsiveBreakpoints from "./ResponsiveBreakpoints";
 import Small from "./Small";
 
 export default {
-  title: "Components/Table",
+  title: "Content/Table",
   component: Table,
 };
 

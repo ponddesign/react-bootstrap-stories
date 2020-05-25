@@ -1,5 +1,7 @@
 import React from "react";
-import { ListGroup, Tab, Row, Col, Sonnet } from "react-bootstrap";
+import { ListGroup, Tab, Row, Col } from "react-bootstrap";
+
+import Sonnet from "../Tabs/Sonnet";
 
 export default () => (
   <Tab.Container id="list-group-tabs-example" defaultActiveKey="#link1">

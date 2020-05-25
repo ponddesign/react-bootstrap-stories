@@ -1,12 +1,7 @@
 import React from "react";
-import {
-  Form,
-  HelpBlock,
-  InputGroup,
-  Col,
-  Checkbox,
-  Radio,
-} from "react-bootstrap";
+import { Form, InputGroup, Col } from "react-bootstrap";
+
+import HelpBlock from "./HelpBlock";
 
 export default () => (
   <Form>
@@ -110,14 +105,27 @@ export default () => (
       </Form.Group>
     </Form>
 
-    <Checkbox validationState="success">Checkbox with success</Checkbox>
-    <Radio validationState="warning">Radio with warning</Radio>
-    <Checkbox validationState="error">Checkbox with error</Checkbox>
+    <Form.Check type="checkbox" validationState="success">
+      Checkbox with success
+    </Form.Check>
+    <Form.Check type="radio" validationState="warning">
+      Radio with warning
+    </Form.Check>
+    <Form.Check type="checkbox" validationState="error">
+      Checkbox with error
+    </Form.Check>
 
     {/* This requires React 15's <span>-less spaces to be exactly correct. */}
     <Form.Group validationState="success">
-      <Checkbox inline>Checkbox</Checkbox> <Checkbox inline>with</Checkbox>{" "}
-      <Checkbox inline>success</Checkbox>
+      <Form.Check type="checkbox" inline>
+        Checkbox
+      </Form.Check>{" "}
+      <Form.Check type="checkbox" inline>
+        with
+      </Form.Check>{" "}
+      <Form.Check type="checkbox" inline>
+        success
+      </Form.Check>
     </Form.Group>
   </Form>
 );

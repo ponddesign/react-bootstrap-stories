@@ -13,7 +13,7 @@ import RowColLayout from "./RowColLayout.js";
 import RowColLayoutColWidthBreakpoint from "./RowColLayoutColWidthBreakpoint.js";
 
 export default {
-  title: "Components/Grid",
+  title: "Layout/Grid",
   // component: Container, // Row, Col
 };
 

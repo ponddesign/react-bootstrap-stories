@@ -1,5 +1,7 @@
 import React from "react";
-import { Row, Col, Nav, Tab, Sonnet } from "react-bootstrap";
+import { Row, Col, Nav, Tab } from "react-bootstrap";
+
+import Sonnet from "./Sonnet";
 
 export default () => (
   <Tab.Container id="left-tabs-example" defaultActiveKey="first">

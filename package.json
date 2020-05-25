@@ -1,6 +1,6 @@
 {
-  "name": "react-bootstrap-docs-2",
-  "version": "0.1.0",
+  "name": "react-bootstrap-docs",
+  "version": "1.0.1",
   "private": true,
   "dependencies": {
     "@babel/plugin-proposal-export-default-from": "^7.8.3",
@@ -8,7 +8,6 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "react": "^16.13.1",
-    "react-bootstrap": "^1.0.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1"
   },
@@ -35,11 +34,15 @@
       "last 1 safari version"
     ]
   },
+  "peerDependencies": {
+    "react-bootstrap": "^1.0.0"
+  },
   "devDependencies": {
     "@storybook/addon-actions": "^5.3.19",
     "@storybook/addon-links": "^5.3.19",
     "@storybook/addons": "^5.3.19",
     "@storybook/preset-create-react-app": "^3.0.0",
-    "@storybook/react": "^5.3.19"
+    "@storybook/react": "^5.3.19",
+    "react-bootstrap": "^1.0.1"
   }
 }

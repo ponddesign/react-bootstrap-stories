@@ -1,6 +1,6 @@
 import { Image } from "react-bootstrap";
 
 export default {
-  title: "Components/Image",
+  title: "Content/Images",
   component: Image,
 };

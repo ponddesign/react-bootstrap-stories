@@ -1,5 +1,7 @@
 import React from "react";
-import { Tab, Tabs, Sonnet } from "react-bootstrap";
+import { Tab, Tabs } from "react-bootstrap";
+
+import Sonnet from "./Sonnet";
 
 export default () => {
   const [key, setKey] = React.useState("home");

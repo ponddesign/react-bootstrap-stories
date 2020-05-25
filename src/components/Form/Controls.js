@@ -1,5 +1,7 @@
 import React from "react";
-import { Button, Checkbox, Form, HelpBlock, Radio } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
+
+import HelpBlock from "./HelpBlock";
 
 function FieldGroup({ id, label, help, ...props }) {
   return (
@@ -33,27 +35,34 @@ export default () => (
       help="Example block-level help text here."
     />
 
-    <Checkbox checked readOnly>
+    <Form.Check type="checkbox" checked readOnly>
       Checkbox
-    </Checkbox>
-    <Radio checked readOnly>
+    </Form.Check>
+    <Form.Check type="radio" checked readOnly>
       Radio
-    </Radio>
+    </Form.Check>
 
     <Form.Group>
-      <Checkbox inline>1</Checkbox> <Checkbox inline>2</Checkbox>{" "}
-      <Checkbox inline>3</Checkbox>
+      <Form.Check type="checkbox" inline>
+        1
+      </Form.Check>{" "}
+      <Form.Check type="checkbox" inline>
+        2
+      </Form.Check>{" "}
+      <Form.Check type="checkbox" inline>
+        3
+      </Form.Check>
     </Form.Group>
     <Form.Group>
-      <Radio name="radioGroup" inline>
+      <Form.Check type="radio" name="radioGroup" inline>
         1
-      </Radio>{" "}
-      <Radio name="radioGroup" inline>
+      </Form.Check>{" "}
+      <Form.Check type="radio" name="radioGroup" inline>
         2
-      </Radio>{" "}
-      <Radio name="radioGroup" inline>
+      </Form.Check>{" "}
+      <Form.Check type="radio" name="radioGroup" inline>
         3
-      </Radio>
+      </Form.Check>
     </Form.Group>
 
     <Form.Group controlId="Form.ControlsSelect">

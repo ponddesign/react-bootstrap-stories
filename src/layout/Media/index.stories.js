@@ -6,7 +6,7 @@ import Nesting from "./Nesting";
 import Order from "./Order";
 
 export default {
-  title: "Components/Media",
+  title: "Layout/Media",
   component: Media,
 };
 

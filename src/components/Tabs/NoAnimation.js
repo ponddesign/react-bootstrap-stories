@@ -1,5 +1,7 @@
 import React from "react";
-import { Tabs, Tab, Sonnet } from "react-bootstrap";
+import { Tabs, Tab } from "react-bootstrap";
+
+import Sonnet from "./Sonnet";
 
 export default () => (
   <Tabs defaultActiveKey="home" transition={false} id="noanim-tab-example">
