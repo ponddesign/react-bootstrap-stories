@@ -2,22 +2,11 @@
   "name": "react-bootstrap-docs",
   "version": "1.0.1",
   "private": true,
-  "dependencies": {
-    "@babel/plugin-proposal-export-default-from": "^7.8.3",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
-  },
+  "dependencies": {},
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
+    "start": "start-storybook -p 9009",
+    "build": "build-storybook",
+    "test": "react-scripts test"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -35,6 +24,7 @@
     ]
   },
   "peerDependencies": {
+    "@storybook/react": "^5.0.0",
     "react-bootstrap": "^1.0.0"
   },
   "devDependencies": {
@@ -43,6 +33,12 @@
     "@storybook/addons": "^5.3.19",
     "@storybook/preset-create-react-app": "^3.0.0",
     "@storybook/react": "^5.3.19",
-    "react-bootstrap": "^1.0.1"
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "react": "^16.13.1",
+    "react-bootstrap": "^1.0.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.1"
   }
 }
